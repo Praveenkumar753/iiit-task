@@ -1,0 +1,73 @@
+:root {
+    --header-background-color: #333;
+    --header-text-color: #FDFDFD;
+    --alternate-row-background-color: #DDD;
+    --table-width: 750px;
+    --table-body-height: 300px;
+    --column-one-width: 200px;
+    --column-two-width: 200px;
+    --column-three-width: 350px;
+  }
+  
+  /* Table Styles */
+  .fixed_headers {
+    width: var(--table-width);
+    table-layout: fixed;
+    border-collapse: collapse;
+    margin: 0 auto; /* Center the table horizontally */
+  }
+  
+  .fixed_headers th {
+    text-decoration: underline;
+  }
+  
+  .fixed_headers th, .fixed_headers td {
+    padding: 5px;
+    text-align: left;
+  }
+  
+  .fixed_headers td:nth-child(1), .fixed_headers th:nth-child(1) {
+    min-width: var(--column-one-width);
+  }
+  
+  .fixed_headers td:nth-child(2), .fixed_headers th:nth-child(2) {
+    min-width: var(--column-two-width);
+  }
+  
+  .fixed_headers td:nth-child(3), .fixed_headers th:nth-child(3) {
+    width: var(--column-three-width);
+  }
+  
+  .fixed_headers thead {
+    background-color: var(--header-background-color);
+    color: var(--header-text-color);
+  }
+  
+  .fixed_headers thead tr {
+    display: block;
+    position: relative;
+  }
+  
+  .fixed_headers tbody {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    height: var(--table-body-height);
+  }
+  
+  .fixed_headers tbody tr:nth-child(even) {
+    background-color: var(--alternate-row-background-color);
+  }
+  
+  /* For Old IE */
+  .old_ie_wrapper {
+    height: var(--table-body-height);
+    width: var(--table-width);
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  .old_ie_wrapper tbody {
+    height: auto;
+  }
+  

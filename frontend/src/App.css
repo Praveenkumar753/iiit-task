@@ -1,0 +1,19 @@
+:root {
+  --main-text-color: rgb(163, 163, 163);
+  --secondary-text-color: rgb(201, 201, 201);
+  --background-color: rgb(255, 255, 255);
+  --highlight-color: rgb(34, 255, 0);
+}
+
+body {
+  color: var(--main-text-color);
+  background-color: var(--main-text-color);
+}
+
+.secondary-text {
+  color: var(--secondary-text-color);
+}
+
+.highlight {
+  color: var(--highlight-color);
+}

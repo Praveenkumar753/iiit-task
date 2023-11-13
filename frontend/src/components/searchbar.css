@@ -1,0 +1,20 @@
+/* SearchBar.css */
+.search-bar {
+  display: flex;
+}
+
+.search-bar input {
+  padding: 8px;
+}
+
+.search-bar button {
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+}
+
+.search-bar button:hover {
+  background-color: #555;
+}
