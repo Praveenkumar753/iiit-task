@@ -11,7 +11,7 @@ body {
 }
 
 .secondary-text {
-  color: var(--secondary-text-color);
+  color: var(--background-color);
 }
 
 .highlight {

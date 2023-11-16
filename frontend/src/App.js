@@ -4,7 +4,8 @@ import Navbar from './components/navbar';
 import Sidebar from './components/sidebar';
 // import SearchBar from './components/searchbar';
 import Cards from './components/cards';
-import './App.css'
+import FourPieCharts from './components/pie';
+// import './App.css'
 import TableComponent from './components/table';
 function App() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -24,6 +25,7 @@ function App() {
       {/* <SearchBar /> */}
       {<Cards/>}
       {<TableComponent/>}
+      {<FourPieCharts/>}
       <div className="content">
         {/* Other content goes here */}
       </div>

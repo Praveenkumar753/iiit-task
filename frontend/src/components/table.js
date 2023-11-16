@@ -1,17 +1,16 @@
 // TableComponent.js
 import React from 'react';
-import './table.css'; // You can create a separate CSS file for styling if needed
+import './table.css';
 
 const TableComponent = () => {
-  // Sample data for the table
   const tableData = [
-    { name: 'Apple', color: 'Red', description: 'These are red.' },
-    { name: 'Pear', color: 'Green', description: 'These are green.' },
-    { name: 'Grape', color: 'Purple / Green', description: 'These are purple and green.' },
-    { name: 'Orange', color: 'Orange', description: 'These are orange.' },
-    { name: 'Banana', color: 'Yellow', description: 'These are yellow.' },
-    { name: 'Kiwi', color: 'Green', description: 'These are green.' },
-    { name: 'Plum', color: 'Purple', description: 'These are Purple.' },
+    { name: 'Apple', color: 'Red', description: 'These are red.', col4: 'none', col5: 'none' },
+    { name: 'Pear', color: 'Green', description: 'These are green.', col4: 'none', col5: 'none' },
+    { name: 'Grape', color: 'Purple / Green', description: 'These are purple and green.', col4: 'none', col5: 'none' },
+    { name: 'Orange', color: 'Orange', description: 'These are orange.', col4: 'none', col5: 'none' },
+    { name: 'Banana', color: 'Yellow', description: 'These are yellow.', col4: 'none', col5: 'none' },
+    { name: 'Kiwi', color: 'Green', description: 'These are green.', col4: 'none', col5: 'none' },
+    { name: 'Plum', color: 'Purple', description: 'These are Purple.', col4: 'none', col5: 'none' },
   ];
 
   return (
@@ -21,6 +20,8 @@ const TableComponent = () => {
           <th>Name</th>
           <th>Color</th>
           <th>Description</th>
+          <th>col4</th>
+          <th>col5</th>
         </tr>
       </thead>
       <tbody>
@@ -29,6 +30,8 @@ const TableComponent = () => {
             <td>{item.name}</td>
             <td>{item.color}</td>
             <td>{item.description}</td>
+            <td>{item.col4}</td>
+            <td>{item.col5}</td>
           </tr>
         ))}
       </tbody>
