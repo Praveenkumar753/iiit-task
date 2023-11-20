@@ -2,11 +2,12 @@
 import React, { useState } from 'react';
 import Navbar from './components/navbar';
 import Sidebar from './components/sidebar';
-// import SearchBar from './components/searchbar';
+import Form from './components/form.js';
 import Cards from './components/cards';
 import FourPieCharts from './components/pie';
 // import './App.css'
 import TableComponent from './components/table';
+import Footer from './components/footer.js';
 function App() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
@@ -26,6 +27,8 @@ function App() {
       {<Cards/>}
       {<TableComponent/>}
       {<FourPieCharts/>}
+      {<Form/>}
+      {<Footer/>}
       <div className="content">
         {/* Other content goes here */}
       </div>

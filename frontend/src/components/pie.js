@@ -6,8 +6,8 @@ import HighchartsReact from 'highcharts-react-official';
 import './pie.css';
 
 const PieChart = ({ chartOptions }) => {
-  return <HighchartsReact highcharts={Highcharts} options={chartOptions} />;
-};
+ return <HighchartsReact highcharts={Highcharts} options={chartOptions} />;
+ };
 
 const FourPieCharts = () => {
   const chartOptions1 = {
