@@ -10,7 +10,20 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
       <button className="close-btn" onClick={closeSidebar}>
         &times;
       </button>
-      {/* Sidebar content goes here */}
+      <ul>
+        <li>
+          <a href="#games">Games</a>
+        </li>
+        <li>
+          <a href="#table">Charts</a>
+        </li>
+        <li>
+          <a href="#pie">Charts</a>
+        </li>
+        <li>
+          <a href="#form">Charts</a>
+        </li>
+      </ul>
     </div>
   );
 };

@@ -1,4 +1,6 @@
 /* Navbar.css */
+
+/* Common styles */
 .navbar {
   background-color: #000;
   padding: 10px;
@@ -22,4 +24,23 @@
   margin-right: auto;
 }
 
-/* Add SearchBar styles here if needed */
+/* Mobile styles */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: nowrap; /* Prevent content from wrapping */
+    justify-content: flex-start; /* Start content from the left */
+    padding: 10px -0px; /* Adjust padding for smaller screens */
+    overflow-x: auto; /* Enable horizontal scrolling for content */
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+  }
+
+  .menu-btn {
+    font-size: 18px;
+    margin-right: 10px;
+  }
+
+  .brand {
+    font-size: 1.2rem;
+    margin-right: 0;
+  }
+}

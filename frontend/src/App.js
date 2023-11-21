@@ -22,16 +22,17 @@ function App() {
   return (
     <div className="app">
       <Navbar toggleSidebar={toggleSidebar} />
-      <Sidebar isOpen={isSidebarOpen} closeSidebar={closeSidebar} />
-      {/* <SearchBar /> */}
-      {<Cards/>}
+       <Sidebar isOpen={isSidebarOpen} closeSidebar={closeSidebar} />
+       <h2>Popular games</h2>
+       {<Cards/>}
+       <h2>Game Details</h2>
       {<TableComponent/>}
-      {<FourPieCharts/>}
-      {<Form/>}
-      {<Footer/>}
-      <div className="content">
-        {/* Other content goes here */}
-      </div>
+      <h2>Gaming Statistics</h2>
+       {<FourPieCharts/>}
+       <h2>Feedback Form</h2>
+       {<Form/>}
+      {<Footer/>} 
+      
     </div>
   );
 }

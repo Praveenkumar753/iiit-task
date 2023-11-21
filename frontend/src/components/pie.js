@@ -1,19 +1,24 @@
-// FourPieCharts.js
-
 import React from 'react';
 import Highcharts from 'highcharts';
 import HighchartsReact from 'highcharts-react-official';
 import './pie.css';
 
 const PieChart = ({ chartOptions }) => {
- return <HighchartsReact highcharts={Highcharts} options={chartOptions} />;
- };
+  return <HighchartsReact highcharts={Highcharts} options={chartOptions} />;
+};
 
 const FourPieCharts = () => {
-  const chartOptions1 = {
+  const commonChartOptions = {
     chart: {
       type: 'pie',
     },
+    credits: {
+      enabled: false, // Disable Highcharts credits for all charts
+    },
+  };
+
+  const chartOptions1 = {
+    ...commonChartOptions,
     title: {
       text: 'Chart 1',
     },
@@ -30,9 +35,7 @@ const FourPieCharts = () => {
   };
 
   const chartOptions2 = {
-    chart: {
-      type: 'pie',
-    },
+    ...commonChartOptions,
     title: {
       text: 'Chart 2',
     },
@@ -49,9 +52,7 @@ const FourPieCharts = () => {
   };
 
   const chartOptions3 = {
-    chart: {
-      type: 'pie',
-    },
+    ...commonChartOptions,
     title: {
       text: 'Chart 3',
     },
@@ -69,9 +70,7 @@ const FourPieCharts = () => {
   };
 
   const chartOptions4 = {
-    chart: {
-      type: 'pie',
-    },
+    ...commonChartOptions,
     title: {
       text: 'Chart 4',
     },
@@ -89,7 +88,9 @@ const FourPieCharts = () => {
   };
 
   return (
+    <section id="pie">
     <div className="pie-container">
+       
       <div className="pie-chart">
         <PieChart chartOptions={chartOptions1} />
       </div>
@@ -102,8 +103,11 @@ const FourPieCharts = () => {
       <div className="pie-chart">
         <PieChart chartOptions={chartOptions4} />
       </div>
+      
     </div>
+    </section>
   );
+  
 };
 
 export default FourPieCharts;

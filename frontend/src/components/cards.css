@@ -1,11 +1,20 @@
+/* cards.css */
+body{
+  background: linear-gradient(to top, #fdb777, #fda666, #fd9346, #fd7f2c, #ff6200);
+}
 .cards-container {
-  background-color: rgb(163, 163, 163);
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   max-width: 1200px;
   margin: 0 auto;
   padding: 45px;
+}
+
+.cards-container h2 {
+  text-align: center;
+  color: #fff; /* Adjust heading text color */
+  margin-bottom: 20px; /* Add some spacing between heading and cards */
 }
 
 .card {
@@ -18,6 +27,8 @@
   text-align: center;
   overflow: hidden;
   transition: transform 0.2s;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -37,6 +48,9 @@
   height: 30%; /* Adjust the height of the content area */
   box-sizing: border-box; /* Include padding and border in the total height */
   overflow: hidden; /* Hide content if it exceeds the specified height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .card h3 {
@@ -47,12 +61,9 @@
   margin: 10px 0;
 }
 
-.h1{
- padding-right: 1000px;
-}
-
 @media (max-width: 600px) {
   .card {
     flex: 0 0 calc(100% - 40px);
+    height: auto; /* Allow the card height to adjust based on content */
   }
 }

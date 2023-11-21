@@ -1,5 +1,6 @@
 /* Apply CSS Grid for the container */
 .pie-container {
+  color:yellow;
   display: grid;
   grid-template-columns: repeat(2, minmax(200px, 1fr)); /* Adjust as needed */
   gap: 20px;
@@ -15,6 +16,11 @@
   width: 60%; /* Adjust width as needed */
   height: 100px; /* Adjust height as needed */
 }
+
+.highcharts-link {
+  display: none !important;
+}
+
 
 /* Media query for tablets and smaller screens */
 @media (max-width: 768px) {

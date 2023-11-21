@@ -1,94 +1,34 @@
 /* table.css */
 
+/* Define CSS variables for easier management */
 :root {
   --header-background-color: #333;
   --header-text-color: #fdfdfd;
   --alternate-row-background-color: #786363;
-  --table-width: 750px;
-  --table-body-height: 300px;
-  --column-one-width: 200px;
-  --column-two-width: 200px;
-  --column-three-width: 350px;
-  --col4-width: 165px; /* Adjust the width for col4 */
-  --col5-width: 165px; /* Adjust the width for col5 */
+  --table-width: 100%; /* Change to percentage for responsiveness */
+  --column-width: 20%; /* Change column width as needed */
 }
 
 /* Table Styles */
 .fixed_headers {
-  width: 100%;
+  width: var(--table-width);
   table-layout: fixed;
   border-collapse: collapse;
-  margin: 0 auto; /* Center the table horizontally */
+  margin: 0 auto;
 }
 
 .fixed_headers th {
-  text-decoration: underline;
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
   padding: 10px;
   text-align: left;
-}
-
-.fixed_headers th:nth-child(1) {
-  min-width: var(--column-one-width);
-}
-
-.fixed_headers th:nth-child(2) {
-  min-width: var(--column-two-width);
-}
-
-.fixed_headers th:nth-child(3) {
-  width: var(--column-three-width);
-}
-
-.fixed_headers th:nth-child(4) {
-  min-width: var(--col4-width); /* Set the min-width for col4 */
-}
-
-.fixed_headers th:nth-child(5) {
-  min-width: var(--col5-width); /* Set the min-width for col5 */
 }
 
 .fixed_headers th,
 .fixed_headers td {
   padding: 10px;
   text-align: left;
-}
-
-.fixed_headers td:nth-child(1) {
-  min-width: var(--column-one-width);
-}
-
-.fixed_headers td:nth-child(2) {
-  min-width: var(--column-two-width);
-}
-
-.fixed_headers td:nth-child(3) {
-  width: var(--column-three-width);
-}
-
-.fixed_headers td:nth-child(4) {
-  min-width: var(--col4-width); /* Set the min-width for col4 */
-}
-
-.fixed_headers td:nth-child(5) {
-  min-width: var(--col5-width); /* Set the min-width for col5 */
-}
-
-.fixed_headers thead {
-  background-color: var(--header-background-color);
-  color: var(--header-text-color);
-  z-index: 2;
-}
-
-.fixed_headers thead tr {
-  display: block;
-  position: relative;
-}
-
-.fixed_headers tbody {
-  display: block;
-  overflow: auto;
-  width: 100%;
-  max-height: var(--table-body-height);
+  width: var(--column-width); /* Adjust column width */
 }
 
 .fixed_headers tbody tr:nth-child(even) {
@@ -102,17 +42,29 @@
     font-size: 14px; /* Adjust font size for smaller screens */
   }
 
-  .fixed_headers td:nth-child(1),
-  .fixed_headers th:nth-child(1),
-  .fixed_headers td:nth-child(2),
-  .fixed_headers th:nth-child(2),
-  .fixed_headers td:nth-child(3),
-  .fixed_headers th:nth-child(3),
-  .fixed_headers td:nth-child(4),
-  .fixed_headers th:nth-child(4),
-  .fixed_headers td:nth-child(5),
-  .fixed_headers th:nth-child(5) {
-    min-width:100%; /* Allow columns to take up available space */
-    width: 100%;
+  .fixed_headers {
+    width: 100%; /* Make the table full width on smaller screens */
+  }
+
+  .fixed_headers th,
+  .fixed_headers td {
+    width: auto; /* Allow columns to take up available space */
+    display: block;
+    text-align: center; /* Center align the content */
+  }
+
+  .fixed_headers thead {
+    display: none; /* Hide thead on smaller screens */
+  }
+
+  .fixed_headers tbody tr {
+    margin-bottom: 10px; /* Add spacing between rows */
+    border: 1px solid #ccc; /* Add borders to rows */
+  }
+
+  .fixed_headers tbody td:before {
+    content: attr(data-label); /* Show column labels */
+    font-weight: bold;
+    display: block;
   }
 }

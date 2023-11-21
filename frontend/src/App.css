@@ -6,8 +6,7 @@
 }
 
 body {
-  color: var(--main-text-color);
-  background-color: var(--main-text-color);
+  background: linear-gradient(to right,#ff6200,#fd7f2c,#fd9346,#fda666,   #fdb777  );
 }
 
 .secondary-text {
